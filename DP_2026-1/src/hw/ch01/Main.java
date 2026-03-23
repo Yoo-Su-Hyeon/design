@@ -17,6 +17,8 @@ public class Main {
         bookShelf.appendBook(new Book("어린왕자", "소설", 1943, 9000));
 
         // 장르가 소설인 책만 출력
+        System.out.println("20240277 유수현");
+
         System.out.println("[소설 장르 책 출력]");
         Iterator<Book> genreIt = bookShelf.iteratorByGenre("소설");
         while (genreIt.hasNext()) {
