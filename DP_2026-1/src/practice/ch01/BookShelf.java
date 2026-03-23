@@ -1,9 +1,9 @@
 package practice.ch01;
 
-// import java.util.Iterator;
+import java.util.Iterator;
 
-//public class BookShelf implements Iterable<Book> {
-public class BookShelf {
+public class BookShelf implements Iterable<Book> {
+//public class BookShelf {
     private Book[] books;
     private int last = 0;
 
@@ -24,8 +24,8 @@ public class BookShelf {
         return last;
     }
 
-    // @Override
-    // public Iterator<Book> iterator() {
-    //     return new BookShelfIterator(this);
-    // }
+    @Override
+    public Iterator<Book> iterator() {
+        return new BookShelfIterator(this); //인자를 현재 책꽂이 자신으로 넘겨줌
+    }
 }
