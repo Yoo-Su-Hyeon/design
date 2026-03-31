@@ -1,13 +1,19 @@
-package ch03.Sample;
+package hw.ch03;
 
 public class CharDisplay extends AbstractDisplay {
-    private char ch;  
+    private char ch;
 
     public CharDisplay(char ch) {
+        super();
         this.ch = ch;
     }
 
-    @Override   
+    public CharDisplay(char ch, int repeatCount) {
+        super(repeatCount);
+        this.ch = ch;
+    }
+
+    @Override
     public void open() {
         System.out.print("<<");
     }
