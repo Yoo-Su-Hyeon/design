@@ -26,7 +26,7 @@ public class UnderlinePen implements Product {
             p = (Product)clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
-        }
+        }   
         return p;
     }
 }

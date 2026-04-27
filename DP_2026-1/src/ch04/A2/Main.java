@@ -13,5 +13,6 @@ public class Main {
         card1.use();
         card2.use();
         card3.use();
+        
     }
 }

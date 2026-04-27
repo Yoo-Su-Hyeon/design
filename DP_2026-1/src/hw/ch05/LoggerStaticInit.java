@@ -15,8 +15,7 @@ public class LoggerStaticInit {
     } 
 
     public void log(String message) { 
-        logBuffer.append("[").append(System.currentTimeMillis()).append("] ") 
-.append(message).append("\n"); 
+        logBuffer.append("[").append(System.currentTimeMillis()).append("] ") .append(message).append("\n"); 
 System.out.println("[LoggerStaticInit] " + message); 
 } 
 public String getLog() { 
