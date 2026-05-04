@@ -1,4 +1,4 @@
-package ch11.Sample;
+package hw.ch11;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class Directory extends Entry {
     @Override
     public int getSize() {
         int size = 0;
-        for (Entry entry: directory) {
+        for (Entry entry : directory) {
             size += entry.getSize();
         }
         return size;
@@ -34,7 +34,7 @@ public class Directory extends Entry {
         }
 
         for (Entry entry : directory) {
-            result.addAll(entry.search(keyword));  // ⭐ 핵심
+            result.addAll(entry.search(keyword));
         }
 
         return result;
@@ -43,13 +43,14 @@ public class Directory extends Entry {
     @Override
     protected void printList(String prefix) {
         System.out.println(prefix + "/" + this);
-        for (Entry entry: directory) {
+        for (Entry entry : directory) {
             entry.printList(prefix + "/" + name);
         }
     }
 
-    public Entry add(Entry entry) {
-        directory.add(entry);
-        return this;
-    }
+public Entry add(Entry entry) {
+    entry.setParent(this);
+    directory.add(entry);
+    return this;
+}
 }
